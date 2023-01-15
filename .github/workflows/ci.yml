@@ -1,0 +1,31 @@
+# 流程名称
+name: Deploy
+
+# 监听事件
+on:
+  push: # 监听push事件，在master分支发生push事件时触发。
+    branches:
+      - master
+
+jobs: # 工作流
+  build: # 自定义名称
+    name: deploy-site
+    runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
+
+    steps: # 步骤
+      - name: Checkout # 步骤 1
+        uses: actions/checkout@v2 # 作用：检出仓库，获取源码
+
+      - name: Use Node@14.x # 步骤 2
+        uses: actions/setup-node@v1 # 作用：安装nodejs环境
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies # 步骤 3
+        run: npm install # 安装依赖
+
+      - name: run deploy.sh # 步骤  3 （同时部署到github和coding）
+        env: # 设置环境变量
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+          CODING_TOKEN: ${{ secrets.CODING_TOKEN }} # toKen私密变量
+        run: npm run deploy # 运行我们自己写的shell脚本
