@@ -13,7 +13,7 @@ else
   msg='来自github action的自动部署'
   githubUrl=https://SnailRunStar:${GITHUB_TOKEN}@github.com/SnailRunStar/xustar-blog.git
   git config --global user.name "SnailRunStar"
-  git config --global user.email "405198725@qq.com"
+  git config --global user.email "oxin520@163.com"
 fi
 git init
 git add -A
