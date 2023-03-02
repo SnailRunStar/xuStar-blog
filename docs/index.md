@@ -22,3 +22,10 @@ postList: none
 ---
 
 ## 🎖推荐的开源项目
+:::tips
+[Nacos](https://nacos.io/zh-cn/)<br />[🚀一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。](https://nacos.io/zh-cn/)
+:::
+
+:::tips
+[GitHub-Chinese-Top-ChartsGitHub](https://github.com/GrowingGit/GitHub-Chinese-Top-Charts)<br />[🚀中文排行榜，各语言分设「软件 | 资料」榜单，精准定位中文好项目。各取所需，高效学习](https://nacos.io/zh-cn/)
+:::
