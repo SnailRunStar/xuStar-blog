@@ -10,7 +10,7 @@ npm run build
 cd docs/.vuepress/dist
 
 # deploy to github
-#echo 'b.miluluyo.github.io' > CNAME
+echo 'www.starxu.top' > CNAME
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
   githubUrl=git@github.com:SnailRunStar/xustar-blog.git
@@ -28,7 +28,7 @@ git push -f $githubUrl master:gh-pages # 推送到github
 
 
 # deploy to coding
-#echo 'www.miluluu.com\miluluu.com' > CNAME  # 自定义域名
+#echo 'www.starxu.top' > CNAME  # 自定义域名
 #if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
 #  codingUrl=git@e.coding.net:xustar/star/xustar-blog.git
 #else
